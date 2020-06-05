@@ -4,17 +4,21 @@
   "description": "A minimalistic NodeJS based Typescript, Expressjs and TypeORM boilerplate generator",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "bin": {
+    "tseo": "./lib/index.js"
+  },
   "scripts": {
     "build": "tsc",
+    "start": "ts-node src/index.ts",
     "run": "node lib/index.js",
     "test": "echo All test passed",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "preversion" : "npm run format",
-    "prepublishOnly" : "npm test && npm run format",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "preversion": "npm run format",
+    "prepublishOnly": "npm test && npm run format",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -26,7 +30,9 @@
     "TypeORM",
     "ExpressJS"
   ],
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "author": "Amit Jha",
   "license": "MIT",
   "bugs": {
@@ -37,8 +43,14 @@
     "@types/node": "^14.0.11",
     "prettier": "^2.0.5",
     "prompt": "^1.0.0",
+    "ts-node": "^8.10.2",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "figlet": "^1.4.0"
   }
 }
