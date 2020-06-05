@@ -28,4 +28,3 @@ export const promptFn = () => {
     return 1;
   }
 };
-
