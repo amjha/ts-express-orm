@@ -1,7 +1,7 @@
 {
   "name": "ts-express-orm",
   "version": "0.0.1",
-  "description": "Minimalist Node, ExpressJS and TypeORM generator",
+  "description": "A minimalistic NodeJS based Typescript, Expressjs and TypeORM boilerplate generator",
   "main": "index.js",
   "scripts": {
     "test": "run test"
