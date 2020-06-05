@@ -1,0 +1,25 @@
+{
+  "name": "ts-express-orm",
+  "version": "0.0.1",
+  "description": "Minimalist Node, ExpressJS and TypeORM generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amjha/ts-express-orm.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Typescript",
+    "TypeORM",
+    "ExpressJS"
+  ],
+  "author": "Amit Jha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amjha/ts-express-orm/issues"
+  },
+  "homepage": "https://github.com/amjha/ts-express-orm#readme"
+}
