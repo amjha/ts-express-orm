@@ -2,9 +2,18 @@
   "name": "ts-express-orm",
   "version": "0.0.1",
   "description": "A minimalistic NodeJS based Typescript, Expressjs and TypeORM boilerplate generator",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "run test"
+    "build": "tsc",
+    "test": "echo All test passed",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "preversion" : "npm run format",
+    "prepublishOnly" : "npm test && npm run format",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -16,10 +25,19 @@
     "TypeORM",
     "ExpressJS"
   ],
+  "files": ["lib/**/*"],
   "author": "Amit Jha",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/amjha/ts-express-orm/issues"
   },
-  "homepage": "https://github.com/amjha/ts-express-orm#readme"
+  "homepage": "https://github.com/amjha/ts-express-orm#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.11",
+    "prettier": "^2.0.5",
+    "prompt": "^1.0.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.5"
+  }
 }
