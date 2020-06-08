@@ -1,5 +1,6 @@
 .idea
 DS_Store
-.env
+**/.env
 node_modules
 lib/
+.DS_Store

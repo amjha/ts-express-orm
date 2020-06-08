@@ -2,9 +2,9 @@
 const chalk = require("chalk");
 const figlet = require("figlet");
 const program = require("commander");
-import * as prompt from "./prompt";
+import * as prompts from "./prompts";
 
-console.log(chalk.red(figlet.textSync("TSEO", { horizontalLayout: "full" })));
+console.log(chalk.green(figlet.textSync("TSEO", { horizontalLayout: "full" })));
 
 program
   .version("0.0.4")
@@ -14,4 +14,4 @@ program
   .option("-O, --no-typeorm", "You do not want any TypeORM")
   .parse(process.argv);
 
-prompt.promptFn();
+  prompts.promptsFn();
