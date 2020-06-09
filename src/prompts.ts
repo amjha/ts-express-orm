@@ -1,4 +1,4 @@
-import { inject } from "./inject"
+import { inject } from "./inject";
 export const promptsFn = () => {
   const prompts = require("prompts");
   const properties = [
@@ -6,12 +6,18 @@ export const promptsFn = () => {
       type: "text",
       name: "projectName",
       message: "Project name:",
-      validate: (projectName: string) => projectName.match(/^[a-zA-Z0-9\s\-_]+$/) ? true : "Project name must only conaton letters, numbers or dashes",
+      validate: (projectName: string) =>
+        projectName.match(/^[a-zA-Z0-9\s\-_]+$/)
+          ? true
+          : "Project name must only conaton letters, numbers or dashes",
     },
     {
       type: "text",
       name: "projectAuthor",
-      validate: (username: string) => username.match(/^[a-zA-Z\s\-]+$/) ? true : "Username must be only letters, spaces, or dashes",
+      validate: (username: string) =>
+        username.match(/^[a-zA-Z\s\-]+$/)
+          ? true
+          : "Username must be only letters, spaces, or dashes",
       message: "Author name: ",
     },
     {
@@ -20,20 +26,20 @@ export const promptsFn = () => {
       message: "License (MIT):",
     },
     {
-      type: 'select',
-      name: 'databaseType',
-      message: 'Pick a Databse Type:',
+      type: "select",
+      name: "databaseType",
+      message: "Pick a Databse Type:",
       choices: [
-        { title: 'MySQL', value: 'mysql' },
-        { title: 'PostgreSQL', value: 'postgres' },
-        { title: 'SQLite', value: 'sqlite' },
-        { title: 'MSSql', value: 'mssql' },
-        { title: 'Oracle', value: 'oracle' },
-        { title: 'CockroachDB', value: 'cockroachdb'},
-        { title: 'MariaDB', value: 'mariadb'}
+        { title: "MySQL", value: "mysql" },
+        { title: "PostgreSQL", value: "postgres" },
+        { title: "SQLite", value: "sqlite" },
+        { title: "MSSql", value: "mssql" },
+        { title: "Oracle", value: "oracle" },
+        { title: "CockroachDB", value: "cockroachdb" },
+        { title: "MariaDB", value: "mariadb" },
       ],
-      initial: 0
-    }
+      initial: 0,
+    },
   ];
 
   (async () => {
