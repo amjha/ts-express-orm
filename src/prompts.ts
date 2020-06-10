@@ -14,10 +14,6 @@ export const promptsFn = () => {
     {
       type: "text",
       name: "projectAuthor",
-      validate: (username: string) =>
-        username.match(/^[a-zA-Z\s\-]+$/)
-          ? true
-          : "Username must be only letters, spaces, or dashes",
       message: "Author name: ",
     },
     {
@@ -44,9 +40,6 @@ export const promptsFn = () => {
 
   (async () => {
     const result = await prompts(properties);
-    // console.log("  Username: " + result.username);
-    // console.log("  Password: " + result.password);
-    // console.log("  Project: " + result.projectName);
     inject(result);
   })();
 };

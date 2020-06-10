@@ -1,6 +1,6 @@
 {
   "name": "ts-express-orm",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A minimalistic NodeJS based Typescript, Expressjs and TypeORM boilerplate generator",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -53,6 +53,7 @@
     "commander": "^5.1.0",
     "figlet": "^1.4.0",
     "fs-extra": "^9.0.1",
+    "node-fetch": "^2.6.0",
     "prompts": "^2.3.2"
   }
 }
