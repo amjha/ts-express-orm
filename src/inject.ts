@@ -50,7 +50,10 @@ export const inject = (options: Ioptions) => {
         version: "0.0.1",
         description: "A minimal project structure",
         license: options.porjectLicense,
-        script: { test: "echo run some tests!" },
+        scripts: { 
+          "test": "echo run some tests!",
+          "start": "ts-node src/index.ts" 
+        },
         author: options.projectAuthor,
         dependencies: {
             "reflect-metadata": "^0.1.10",

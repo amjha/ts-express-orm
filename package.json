@@ -1,6 +1,6 @@
 {
   "name": "ts-express-orm",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A minimalistic NodeJS based Typescript, Expressjs and TypeORM boilerplate generator",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,9 +15,8 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "preversion": "npm run format",
-    "prepublishOnly": "npm test && npm run format",
-    "version": "npm run format && git add -A src",
+    "prepublishOnly": "npm test",
+    "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
   "repository": {
